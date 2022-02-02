@@ -1,0 +1,2 @@
+ovdje se nalazi sadrzaj koji treba biti
+kopiran karakter po karakter a n byte po byte
