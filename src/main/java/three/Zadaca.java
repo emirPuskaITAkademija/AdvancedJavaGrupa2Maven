@@ -9,18 +9,19 @@ public class Zadaca {
         //brojevi
         int[] numbers = {12, 34454, 2, 343, 45, 67, 88888888, 35, 5, 23};
 
-
-        for(int i = 0; i<numbers.length-1; i++){
-            boolean sortirani = true;
-            if(numbers[i]>numbers[i+1]){
-                int temp = numbers[i];
-                numbers[i] = numbers[i+1];
-                numbers[i+1] = temp;
+        // i = 1
+        for (int i = 1; i < numbers.length; i++) {
+            // i = 1
+            // j = 0, 1, 2, 3, 4, 5, 6, 7, 8
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[i] < numbers[j]) {
+                    int temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
+                }
             }
         }
-        for(int number:numbers){
-            System.out.println(number);
-        }
+        System.out.println(Arrays.toString(numbers));
         String numbersString = Arrays.toString(numbers);
 
         //ispis brojeva -> nema sortiranja ??

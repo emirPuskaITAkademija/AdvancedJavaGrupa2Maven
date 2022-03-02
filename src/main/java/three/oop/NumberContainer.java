@@ -62,7 +62,18 @@ public class NumberContainer<B extends Number> implements Iterable<B> {
     //Zadaća broj 2: Implementirati uklanjanje elementa iz naše kolekcije
     //Hint : System.arraycopy
     //Hint 2 : Arrays.copyOf
-    private void ukloniElementNaIndexu(int i) {
+    private void ukloniElementNaIndexu(int index) {
+        //Number[]
+        //int capacity
+        int movedElements = capacity-index -1;
+        if(movedElements>0){
+            //numbers u numbers
+            // src   destn
+            // numbers  numbers
+            System.arraycopy(numbers, index+1, numbers, index, movedElements);
+        }
+        capacity--;
+        numbers[capacity] = null;
 
     }
 

@@ -6,17 +6,15 @@ import java.util.stream.Stream;
 
 public class NumberContainerDemo {
     public static void main(String[] args) {
-        NumberContainer<Integer> numberContainer = new NumberContainer<>();
-        numberContainer.add(23);
-        numberContainer.add(25);
-        numberContainer.add(2345);
-        numberContainer.add(null);
-        Consumer<Double> doubleConsumer = doubleBroj -> System.out.println(doubleBroj);
-        Consumer<Integer> integerConsumer = integer -> System.out.println(integer);
-        numberContainer.function(integerConsumer);
-        for(Integer number : numberContainer){
+        NumberContainer<Integer> cijeliBrojevi = new NumberContainer<>();
+        cijeliBrojevi.add(23);//0
+        cijeliBrojevi.add(123); //1
+        cijeliBrojevi.add(1);//2 -> uklonjen
+        cijeliBrojevi.add(1000);//3
+        cijeliBrojevi.add(10000);//4
+        cijeliBrojevi.remove(1);
+        for(Integer number: cijeliBrojevi){
             System.out.println(number);
-
         }
     }
 }
